@@ -27,8 +27,8 @@ function reset() {
 // console.log(answer)
 
 //user chooses a letter via key event.
-document.onkeypress = function(event) {
-    // var userGuess = event.key;
+document.onkeypress = function (event) {
+
     var userGuess = String.fromCharCode(event.keyCode).toLowerCase();
 
     guesses.push(userGuess);
@@ -38,7 +38,7 @@ document.onkeypress = function(event) {
 
     if (userGuess == answer) {
         wins++;
-        alert("Namaste, you are Enlightened") ;
+        alert("Namaste, Welcome to Enlightenment!!!");
         reset();
     }
     //  if user guess is different then computer guess, deduct 1 unit from remaining guesses.
@@ -47,20 +47,20 @@ document.onkeypress = function(event) {
     else {
         guessesLeft--;
 
-}
-        if (guessesLeft == 0) {
-            losses++;
-            reset();
+    }
+    if (guessesLeft == 0) {
+        losses++;
+        reset();
 
-        
     }
 
     //  add elements into html
     document.getElementById('guesses').innerHTML = "Your Guesses so far: " + guesses.join("  ");
+
     document.getElementById('wins').innerHTML = "Wins: " + wins;
+
     document.getElementById('guessesLeft').innerHTML = "Guesses Left: " + guessesLeft;
+
     document.getElementById('losses').innerHTML = "Losses: " + losses;
+
 }
-    
-    
-    
