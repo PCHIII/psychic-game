@@ -17,14 +17,10 @@ var answer = alphabet[Math.floor(Math.random() * alphabet.length)];
 
 function reset() {
     reset == answer;
-
-    // console.log(reset);
     guessesLeft = 9;
     guesses = [];
 
 }
-
-// console.log(answer)
 
 //user chooses a letter via key event.
 document.onkeypress = function (event) {
